@@ -29,4 +29,11 @@
 # Executables
 *.exe
 *.out
-*.app
+*.idea/
+cmake-build-debug/
+temp_exec/work_3_allocator
+temp_exec/work_2_allocator
+temp_exec/work_2_FilterIP
+temp_exec/work_4_SFINAE
+temp_exec/work_5/
+
