@@ -18,6 +18,9 @@ const char * build_work_4 = "mkdir -p ./temp_exec/work_4_SFINAE && cd ./temp_exe
 const std::string run_work_5 = "./temp_exec/work_5/editor";
 const char * build_work_5 = "mkdir -p ./temp_exec/work_5 && cd ./temp_exec/work_5 && cmake ../../src/work_5/ && make";
 
+const std::string run_work_6 = "./temp_exec/work_6/matrix";
+const char * build_work_6 = "mkdir -p ./temp_exec/work_6 && cd ./temp_exec/work_6 && cmake ../../src/work_6/ && make";
+
 
 int main() {
     using namespace std::chrono_literals;
@@ -47,11 +50,18 @@ int main() {
 //    std::system(run_work_4.c_str());
 //    std::this_thread::sleep_for(2000ms);
 
-    std::cout << "\n\n================= work_5_editor =================\n" << std::endl;
-    std::ifstream work_5(run_work_5);
-    if (!work_5)
-        std::system(build_work_5);
-    std::system(run_work_5.c_str());
+//    std::cout << "\n\n================= work_5_editor =================\n" << std::endl;
+//    std::ifstream work_5(run_work_5);
+//    if (!work_5)
+//        std::system(build_work_5);
+//    std::system(run_work_5.c_str());
+//    std::this_thread::sleep_for(2000ms);
+
+    std::cout << "\n\n================= work_6_matrix =================\n" << std::endl;
+    std::ifstream work_6(run_work_6);
+    if (!work_6)
+        std::system(build_work_6);
+    std::system(run_work_6.c_str());
     std::this_thread::sleep_for(2000ms);
 
 }
