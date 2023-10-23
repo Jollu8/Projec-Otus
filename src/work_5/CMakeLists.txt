@@ -6,7 +6,7 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 project(editor VERSION ${PROJECT_VERSION})
 
 
-configure_file(version.h.in version.h)
+configure_file(version.h.in  ${CMAKE_CURRENT_BINARY_DIR}/versiondef.h)
 
 add_executable(editor run.cpp)
 add_library(print_ver lib.cpp)
