@@ -21,6 +21,13 @@ const char * build_work_5 = "mkdir -p ./temp_exec/work_5 && cd ./temp_exec/work_
 const std::string run_work_6 = "./temp_exec/work_6/matrix";
 const char * build_work_6 = "mkdir -p ./temp_exec/work_6 && cd ./temp_exec/work_6 && cmake ../../src/work_6/ && make";
 
+const std::string run_work_7 = "./temp_exec/work_7/bulk";
+const char * build_work_7 = "mkdir -p ./temp_exec/work_7 && cd ./temp_exec/work_7 && cmake ../../src/work_7/ && make";
+
+const std::string run_work_8 = "./temp_exec/work_8/bayan";
+const char * build_work_8 = "mkdir -p ./temp_exec/work_8 && cd ./temp_exec/work_8 && cmake ../../src/work_8/ && make";
+
+
 
 int main() {
     using namespace std::chrono_literals;
@@ -57,12 +64,27 @@ int main() {
 //    std::system(run_work_5.c_str());
 //    std::this_thread::sleep_for(2000ms);
 
-    std::cout << "\n\n================= work_6_matrix =================\n" << std::endl;
-    std::ifstream work_6(run_work_6);
-    if (!work_6)
-        std::system(build_work_6);
-    std::system(run_work_6.c_str());
+//    std::cout << "\n\n================= work_6_matrix =================\n" << std::endl;
+//    std::ifstream work_6(run_work_6);
+//    if (!work_6)
+//        std::system(build_work_6);
+//    std::system(run_work_6.c_str());
+//    std::this_thread::sleep_for(2000ms);
+
+    std::cout << "\n\n================= work_7_bulk =================\n" << std::endl;
+    std::ifstream work_7(run_work_7);
+    if (!work_7)
+        std::system(build_work_7);
+    std::system(std::string(run_work_7 + " ./data/commands_for_work_7.txt").c_str());
     std::this_thread::sleep_for(2000ms);
+
+
+//    std::cout << "\n\n================= work_8_bayan =================\n" << std::endl;
+//    std::ifstream work_8(run_work_8);
+//    if (!work_8)
+//        std::system(build_work_8);
+//    std::system(std::string(run_work_8 + " -s ~/.. -e QT -l1 -f1 -b100 -m t?g*.*").c_str());
+//    std::this_thread::sleep_for(2000ms);
 
 }
 
